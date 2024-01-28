@@ -1,0 +1,35 @@
+body{    background-color: antiquewhite;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.clock{
+    margin-top: 20px;
+    display:flex;
+    place-content: center;
+}
+.heading{
+    margin-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    
+}
+.time{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.time input{
+    width: 45%;
+    text-align: center;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.time label{
+    text-align: center;
+}
