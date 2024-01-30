@@ -1,4 +1,4 @@
-const date="Feb 14 2024";
+const date="Feb 16 2024";
 document.getElementById("aaa").innerText=date;
 const inputs=document.querySelectorAll("input");
 function timer(){
