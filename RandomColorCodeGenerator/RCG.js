@@ -9,12 +9,14 @@ reset_btn.addEventListener(
 const box=document.getElementById("box");
 var x=0;
 function generate(){
+    box.style.border="none";
     if(x==0){
     var ranNum=Math.floor(Math.random()*16777215);
     var ranCode="#"+ranNum.toString(16);  
     box.innerText=ranCode;
     box.style.backgroundColor=ranCode;
-    box.style.fontSize="40px";
+    box.style.fontSize="30px";
+    box.style.textAlign="center";
     navigator.clipboard.writeText(ranCode);
 }else {
     alert("reset first");
@@ -23,6 +25,7 @@ function generate(){
 generate();
 
 function reset(){
+    box.style.border="1px solid black";
     box.style.backgroundColor="#ffffff";
     box.innerText="#ffffff";
     if(x==1){
