@@ -37,12 +37,15 @@ function invert(){
     code=document.getElementById("box").textContent;
     if(x==0){
    box.style.filter='invert(100%)';
-   
-   box.innerText=code+"\n inverted";
+   var invertedCode=getComputedStyle(box).backgroundColor;
+   box.innerText=code+"\n inverted : "+invertedCode;
+   navigator.clipboard.writeText(invertedCode);
    x=1;
 }else if(x==1){
     box.style.filter='none';
-    box.innerText=code.replace(" inverted","");
+    var parts = code.split(" inverted : ");
+    box.innerText = parts[0];
+    navigator.clipboard.writeText(parts[0]);
     x=0;
 }else return;
 }
