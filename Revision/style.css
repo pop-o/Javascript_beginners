@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+}
+
+html,
+body {
+  background-color: black;
+  height: 100%;
+}
+.btn {
+  color: black;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  /* padding: 1rem; */
+  display: flex;
+  place-content: space-between;
+}
+.left {
+  display: flex;
+  height: 1000;
+  place-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  border-right: 10px solid white;
+  padding: 1rem;
+}
+.score-div {
+  padding: 1rem;
+  width: 20rem;
+  display: grid;
+  font-size: 30px;
+  border: 3px ridge white;
+}
+.heading {
+  text-align: center;
+  font-size: 40px;
+}
+.new {
+  position: relative;
+  margin-bottom: 40vh;
+}
+.newgame {
+  border-radius: 5%;
+  height: 3rem;
+  width: 10rem;
+  font-size: 25px;
+}
+.newgame:hover {
+  background-color: beige;
+  cursor: pointer;
+}
+.message {
+  font-size: 30px;
+}
+
+.right {
+  height: 80vh;
+  width: 60vw;
+  margin-top: 10vh;
+  margin-right: 10vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.new {
+  display: flex;
+  place-content: center;
+}
+.main {
+  text-align: center;
+  font-size: 50px;
+}
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.circle {
+  margin-top: auto;
+  height: 14rem;
+  width: 14rem;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: 80px;
+  border: 1px solid white;
+}
+.butn {
+  width: 23vw;
+  margin: auto;
+  display: flex;
+  place-content: space-between;
+}
+.enter:hover {
+  background-color: beige;
+  cursor: pointer;
+}
+.guess,
+.enter {
+  margin-top: auto;
+  height: 3rem;
+  width: 10rem;
+  font-size: 25px;
+  text-align: center;
+  border: 0px solid transparent;
+  border-radius: 10px;
+}
