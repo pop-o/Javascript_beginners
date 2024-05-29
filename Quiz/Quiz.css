@@ -3,6 +3,7 @@ html,body{
     width: 100%;
     margin: 0;
     overflow: hidden;
+
 }
 .main{
     position: absolute;
@@ -23,6 +24,7 @@ html,body{
    
    display: flex;
    flex-direction: column;
+  
 }
 .row{
     margin: 10px;

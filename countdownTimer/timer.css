@@ -33,3 +33,35 @@ body{    background-color: antiquewhite;
 .time label{
     text-align: center;
 }
+.link{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.link a{
+    text-decoration: none;
+    color: black;
+    margin: 1%;
+
+}
+#player{
+    height: 390px;
+    width: 640px;
+}
+@media screen and (max-width:644px) {
+    #player{
+        height: 195px;
+        width: 320px;
+        transition: 0.5s;
+    }
+}
+@media screen and (min-width:645px) {
+    #player{
+        height: 390px;
+        width: 640px;
+        transition: 0.5s;
+    }
+}

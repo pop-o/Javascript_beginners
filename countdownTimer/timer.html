@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarm</title>
-    <link rel="stylesheet" href="timer.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="timer.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="heading">CountDown Timer</div>
+      <div class="heading" id="aaa"></div>
 
-</head>
-<body>
-    
-        <div class="box">
-            <div class="heading">CountDown Timer</div>
-            <div class="heading" id="aaa">asd</div>
-
-            
-            
-            <div class="clock">
-            <div class="time">
-            <input type="text" readonly><br>
-            <label for="days" >Days</label>
-            </div>
-            <div class="time">
-                <input type="text" readonly><br>
-                <label for="hours">Hours</label>
-                </div>
-                <div class="time">
-                    <input type="text" readonly><br>
-                    <label for="minutes">Minutes</label>
-                    </div>
-                <div class="time"  readonly>
-                <input type="text"><br>
-                <label for="seconds">Seconds</label>
-                </div>    
-            </div>
+      <div class="clock">
+        <div class="time">
+          <input type="text" readonly /><br />
+          <label for="Years">Years</label>
+        </div>
+        <div class="time">
+          <input type="text" readonly /><br />
+          <label for="Months">Months</label>
         </div>
 
-        <script src="timer.js"></script>
-</body>
+        <div class="time">
+          <input type="text" readonly /><br />
+          <label for="days">Days</label>
+        </div>
+        <div class="time">
+          <input type="text" readonly /><br />
+          <label for="hours">Hours</label>
+        </div>
+        <div class="time">
+          <input type="text" readonly /><br />
+          <label for="minutes">Minutes</label>
+        </div>
+        <div class="time" readonly>
+          <input type="text" /><br />
+          <label for="seconds">Seconds</label>
+        </div>
+      </div>
+    </div>
 
+    <script src="timer.js"></script>
+  </body>
 </html>

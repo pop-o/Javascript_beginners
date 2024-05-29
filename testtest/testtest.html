@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testtest</title>
+    <style>
+      body {
+        height: 99vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+      button {
+        padding: 10px;
+        height: 100px auto;
+        width: 100px auto;
+        font-size: 20px;
+        border-radius: 100px;
+        border: transparent;
+        transition: ease-in-out 1s;
+      }
+      button:hover {
+        padding: 20px;
+        height: 100px auto;
+        width: 100px auto;
+        font-size: 30px;
+        border-radius: 100px;
+        box-shadow: 0px 0px 50px 20px rgb(80, 3, 125);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="generate()">Calculate</button>
+    <script>
+      function generate() {
+        var count = 0;
+        var allDaysInAYear = 0;
+        var numbersDivisibleBy3 = [];
+        for (allDaysInAYear = 0; allDaysInAYear <= 366; allDaysInAYear++) {
+          if (allDaysInAYear % 3 == 0) {
+            numbersDivisibleBy3.push(allDaysInAYear);
+          }
+        }
+
+        for (var i = 0; i < numbersDivisibleBy3.length; i++) {
+          if (numbersDivisibleBy3[i].toString().includes("3")) {
+            console.log(numbersDivisibleBy3[i]);
+            count++;
+          }
+        }
+        const btn = document.getElementsByTagName("button")[0];
+        btn.innerHTML = `The total numbers divisible by 3 that contain the digit 3 in year are: ${count}`;
+      }
+    </script>
+  </body>
+</html>

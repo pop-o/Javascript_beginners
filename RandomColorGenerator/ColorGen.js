@@ -1,5 +1,6 @@
 const box=document.getElementsByClassName("box");
 const gen_btn=document.getElementById("generator-btn");
+const body=document.getElementById("bod");
 function generate(){
     const red=(Math.floor(Math.random()*1000))%255;
     const green=(Math.floor(Math.random()*1000))%255;
@@ -10,4 +11,7 @@ function generate(){
     box[3].style.backgroundColor=`rgb(${blue+red},${green},${red})`;
     box[4].style.backgroundColor=`rgb(${red/2},${blue+red},${red})`;
     box[5].style.backgroundColor=`rgb(${blue+blue},${green+green},${blue*red})`;
+    body.style.backgroundImage=`conic-gradient(rgb(${blue+blue},${green+green},${blue*red}),rgb(${red},${green},${blue}),rgb(${blue+blue},${green+red},${blue*red}))`
+    body.style.backgroundSize="100%";
+    setInterval(generate,2000)
 }

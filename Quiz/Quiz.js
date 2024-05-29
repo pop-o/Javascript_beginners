@@ -6,12 +6,12 @@ const question=[
         'd': 'dont know',
         'correct':'a'
 },
-{'que':'asbjdksbbad,n',
-        'a':'HyperText Markup Language',
-        'b':'apple',
-        'c':'bananana',
+{'que':'What is my name?',
+        'a':'Poem',
+        'b':'Popo',
+        'c':'Yato',
         'd': 'dont know',
-        'correct':'b'
+        'correct':'a'
 }
 ]
 let index=0;

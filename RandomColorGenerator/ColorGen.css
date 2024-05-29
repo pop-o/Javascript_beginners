@@ -12,8 +12,10 @@ body{
     padding: 40px;
     width:100px;
     height: 100px;
-    border: 1px solid black;
+    border: 1px solid transparent;
+    border-radius: 10px 25px 80px 100px;
     background-color: white;
+    transition: 1s;
 }
 .btn{
     margin-top: 10px;

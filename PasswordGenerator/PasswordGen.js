@@ -87,6 +87,7 @@ function Reset(){
     lower.checked=false;
     number.checked=false;
     symbol.checked=false;
+    char.value=10;
     navigator.clipboard.writeText("");
     setTimeout(function(){
         alert("Generator reset");
