@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methemetics</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><button class="lightMode">Dark Mode</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="methods">Bisection Method</h1>
+      <section class="inputs">
+        <table class="inputValues">
+          <caption>
+            <!-- need to implement taking function value -->
+
+            Current Function: exp(x)-x-2 | to change to another go to script.js
+            file to change the function
+          </caption>
+
+          <tr>
+            <th>Enter value of a:</th>
+            <td>
+              <input type="number" class="aValue" name="aValue" />
+            </td>
+          </tr>
+          <tr>
+            <th>Enter value of b:</th>
+            <td>
+              <input type="number" class="bValue" name="bValue" />
+            </td>
+          </tr>
+
+          <tr>
+            <th>Enter number of decimal places</th>
+            <td>
+              <input type="number" class="decimal" name="decimal" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button class="enter">Go</button
+              ><button class="reset">Reset</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <table cellspacing="0" class="bisection">
+        <tr>
+          <th>No. of iterations</th>
+          <th>a</th>
+          <th>b</th>
+          <th>c=(a+b)/2</th>
+          <th>f(c)</th>
+          <th>difference</th>
+        </tr>
+      </table>
+      <p class="Answer"></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
