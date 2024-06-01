@@ -42,10 +42,11 @@ const getDecimal = function (x) {
 
 //on enter
 document.querySelector('.enter').addEventListener('click', function () {
-  document.querySelector('.bisection').style.visibility = 'visible';
   let a = Number(document.querySelector('.aValue').value);
   let b = Number(document.querySelector('.bValue').value);
   let decimal = Number(document.querySelector('.decimal').value);
+
+  document.querySelector('.bisection').style.visibility = 'visible';
   a = cut(a, decimal + 3);
   b = cut(b, decimal + 3);
   //calculate mid-point
@@ -95,14 +96,40 @@ document.querySelector('.reset').addEventListener('click', function () {
   }
 });
 //dark mode implement
-document.querySelector('.lightMode').addEventListener('click', function () {
-  document.querySelector('html').style.color = 'white';
-  document.querySelector('body').style.backgroundColor = 'black';
-  for (let i = 0; i < document.querySelectorAll('nav ul a').length; i++) {
-    document.querySelectorAll('nav ul a')[i].style.color = 'white';
+const toggleMode = document.querySelector('.toggleMode');
+toggleMode.addEventListener('click', function () {
+  const nav = document.querySelectorAll('nav ul a');
+  const bisectionTable = document.querySelector('.bisection');
+  const bisectionTh = document.querySelectorAll('.bisection th');
+  const bisectionTd = document.querySelectorAll('.bisection td');
+  console.log(bisectionTd);
+  console.log(bisectionTh);
+  if (!toggleMode.classList.contains('dark')) {
+    document.querySelector('body').classList.add('dark');
+    for (let i = 0; i < nav.length; i++) {
+      nav[i].classList.add('dark');
+    }
+    for (let i = 0; i < bisectionTd.length; i++) {
+      bisectionTd[i].classList.add('darkborder');
+    }
+    for (let i = 0; i < bisectionTh.length; i++) {
+      bisectionTh[i].classList.add('darkborder');
+    }
+
+    toggleMode.classList.add('dark');
+    bisectionTable.classList.add('darkborder');
+  } else {
+    document.querySelector('body').classList.remove('dark');
+    for (let i = 0; i < nav.length; i++) {
+      nav[i].classList.remove('dark');
+    }
+    toggleMode.classList.remove('dark');
+    bisectionTable.classList.remove('darkborder');
+    for (let i = 0; i < bisectionTd.length; i++) {
+      bisectionTd[i].classList.remove('darkborder');
+    }
+    for (let i = 0; i < bisectionTh.length; i++) {
+      bisectionTh[i].classList.remove('darkborder');
+    }
   }
-  document.querySelector('.lightMode').style.color = 'white';
-  document.querySelector('.lightMode').style.backgroundColor = 'black';
-  document.querySelector('.lightMode').textContent = 'Light Mode';
 });
-//toggling modes note implemented

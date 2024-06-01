@@ -4,13 +4,11 @@
   box-sizing: border-box;
 }
 
-html {
-  color: black;
-}
 body {
   height: 100%;
   width: 100%;
   background-color: white;
+  color: black;
 }
 
 header {
@@ -31,18 +29,18 @@ nav ul li {
   list-style: none;
 }
 nav ul a {
+  color: black;
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
-  color: black;
 }
-.lightMode {
+.toggleMode {
   padding: 1rem 2rem 1rem 2rem;
   color: black;
   background-color: white;
   border: none;
   cursor: pointer;
 }
-.lightMode:hover {
+.toggleMode:hover {
   background-color: grey;
   color: white;
 }
@@ -51,7 +49,8 @@ nav ul a:hover {
   background-color: grey;
   color: white;
 }
-.inputValues td {
+.inputValues td,
+.inputValues th {
   border: none;
 }
 .methods {
@@ -77,14 +76,22 @@ td {
   padding: 1rem;
 }
 .bisection {
-  /* border: 1px solid white;    */
   table-layout: fixed;
   text-align: center;
   width: 100%;
   visibility: hidden;
 }
 .bisection,
-.bisection th,
+th,
 td {
+  border: 1px solid black;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+}
+
+.darkborder {
   border: 1px solid white;
 }
