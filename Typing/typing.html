@@ -4,15 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .box {
-        width: 100%;
-        height: 75%;
-      }
-      .dis {
-        pointer-events: none;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     Select time:
@@ -28,11 +20,14 @@
 
     <input type="radio" name="type" value="Char" />Characters <br />
     <input type="radio" name="type" value="Words" />Words <br />
-
-    <h2 id="testText"></h2>
-    <textarea class="box"></textarea>
-    <button id="tryAgain">Try again</button>
-    <p id="message"></p>
+    <section class="main overlay">
+      <h2 id="testText"></h2>
+      <textarea class="box"></textarea>
+    </section>
+    <div>
+      <button id="tryAgain">Try again</button>
+      <p id="message"></p>
+    </div>
     <script src="typing.js"></script>
   </body>
 </html>

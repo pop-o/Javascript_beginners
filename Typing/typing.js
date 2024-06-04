@@ -7,7 +7,13 @@ const testText = document.getElementById('testText');
 const tryAgainBtn = document.getElementById('tryAgain');
 const message = document.getElementById('message');
 const timeEl = document.getElementsByName('time');
-let con, count, num, timeV;
+const main = document.querySelector('.main');
+const box = document.querySelector('.box');
+let con,
+  count,
+  num,
+  timeV,
+  state = 'start';
 
 const getTime = () => {
   for (let i = 0; i < timeEl.length; i++) {
@@ -50,10 +56,11 @@ for (let i = 0; i < typeEl.length; i++) {
     con = getType();
   });
 }
+
 let timeOutId;
-const box = document.querySelector('.box');
 const time = function () {
   timeOutId = setTimeout(() => {
+    inp();
     count = 0;
     const inputText = box.value;
     console.log(inputText);
@@ -77,23 +84,30 @@ const time = function () {
       num = count / (timeV / 60);
       message.textContent = `Speed: ${num} words per minute`;
     }
-    alert('timefinishes');
+    state = 'end';
+
     box.disabled = true;
   }, timeO);
 };
 
-setInterval(() => {
-  if (validation()) {
-    box.disabled = false;
-    box.addEventListener('click', time);
-  } else {
-    box.disabled = true;
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab') {
+    if (validation()) {
+      box.disabled = false;
+      main.classList.remove('overlay');
+      time();
+    } else {
+      box.disabled = true;
+    }
   }
-}, 1);
+});
 
-tryAgainBtn.addEventListener('click', function () {
+const tryAgain = () => {
   box.value = '';
   box.disabled = false;
+  main.classList.add('overlay');
+  document.querySelector('body').classList.remove('overlay');
+  message.textContent = '';
   timeEl.forEach((element) => {
     element.checked = false;
   });
@@ -101,4 +115,34 @@ tryAgainBtn.addEventListener('click', function () {
     element.checked = false;
   });
   clearTimeout(timeOutId);
+  state = 'start';
+};
+tryAgainBtn.addEventListener('click', tryAgain);
+document.addEventListener('keydown', (e) => {
+  if (state === 'end') {
+    if (e.key === 'Tab') {
+      tryAgain();
+    }
+  }
 });
+
+let dum = '';
+const regex = /[a-zA-Z0-9]$/;
+const inp = () => {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Backspace') {
+      dum = dum.substring(0, dum.length - 1);
+    } else if (
+      e.key === 'Enter' ||
+      e.key === 'Alt' ||
+      e.key === 'Tab' ||
+      e.key === 'Control' ||
+      e.key === 'Shift'
+    ) {
+      dum = dum;
+    } else {
+      dum += e.key;
+    }
+  });
+  return dum;
+};
