@@ -10,7 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: black;
+        /* background-color: black; */
       }
       button {
         padding: 10px;
@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <button onclick="generate()">Calculate</button>
+    <!-- <button onclick="generate()">Calculate</button>
     <script>
       function generate() {
         var count = 0;
@@ -46,12 +46,115 @@
 
         for (var i = 0; i < numbersDivisibleBy3.length; i++) {
           if (numbersDivisibleBy3[i].toString().includes("3")) {
-            console.log(numbersDivisibleBy3[i]);
             count++;
           }
         }
         const btn = document.getElementsByTagName("button")[0];
         btn.innerHTML = `The total numbers divisible by 3 that contain the digit 3 in year are: ${count}`;
+      }
+    </script> -->
+
+    <!--     leetcode roman to integer first try
+    <script>
+      
+      var romanToInt = function (s) {
+        const sp = s.split("");
+
+        for (var i = 0; i < sp.length; i++) {
+          console.log(sp);
+          switch (sp[i]) {
+            case "I":
+              if (sp[i + 1] !== "V" && sp[i + 1] !== "X") {
+                sp[i] = 1;
+              } else {
+                if (sp[i + 1] === "V") {
+                  sp[i] = 4;
+                  sp.splice(i + 1, 1);
+                }
+                if (sp[i + 1] === "X") {
+                  sp[i] = 9;
+                  sp.splice(i + 1, 1);
+                }
+              }
+              break;
+            case "X":
+              if (sp[i + 1] !== "L" && sp[i + 1] !== "C") {
+                sp[i] = 10;
+              } else {
+                if (sp[i + 1] === "L") {
+                  sp[i] = 40;
+                  sp.splice(i + 1, 1);
+                }
+                if (sp[i + 1] === "C") {
+                  sp[i] = 90;
+                  sp.splice(i + 1, 1);
+                }
+              }
+
+              break;
+            case "C":
+              if (sp[i + 1] !== "D" && sp[i + 1] !== "M") {
+                sp[i] = 100;
+              } else {
+                if (sp[i + 1] === "D") {
+                  sp[i] = 400;
+                  sp.splice(i + 1, 1);
+                }
+                if (sp[i + 1] === "M") {
+                  sp[i] = 900;
+                  sp.splice(i + 1, 1);
+                }
+              }
+              break;
+            case "V":
+              sp[i] = 5;
+              break;
+            case "L":
+              sp[i] = 50;
+              break;
+            case "M":
+              sp[i] = 1000;
+              break;
+            case "D":
+              sp[i] = 500;
+              break;
+            default:
+              console.log("help");
+          }
+        }
+        let sum = 0;
+        for (var i = 0; i < sp.length; i++) {
+          sum += sp[i];
+        }
+        return sum;
+      };
+
+      console.log(romanToInt("MCMXCIV"));
+    </script> -->
+    <script>
+      const sortt = function (arr) {
+        for (var i = 0; i < arr.length; i++) {}
+      };
+      var arr1 = [324, 5, 3, 234, 342];
+      var arr2 = [1, 2];
+      var arr3 = arr1 + "," + arr2;
+      var arr4 = arr3.split(",");
+      var arr5 = [];
+      while (arr4.length !== 0) {
+        let x = arr4.pop();
+        arr5.push(parseFloat(x));
+      }
+      arr5.reverse();
+
+      arr5.sort();
+      arr5.sort();
+      if (arr5.length % 2 == 0) {
+        let a = arr5.length / 2;
+        console.log(a);
+      } else {
+        let b = Math.floor(arr5.length / 2);
+        console.log(arr5);
+        console.log(arr5[b]);
       }
     </script>
   </body>

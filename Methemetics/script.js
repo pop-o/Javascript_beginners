@@ -88,6 +88,7 @@ document.querySelector('.enter').addEventListener('click', function () {
 
 //reset button
 document.querySelector('.reset').addEventListener('click', function () {
+  document.querySelector('.Answer').textContent = `Answer is :`;
   let len = document.querySelectorAll('.bisection tr').length;
   let x = 1;
   while (len !== 1) {

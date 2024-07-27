@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  /* border: 1px solid black; */
+  height: 5vh;
+}
+
+.navv {
+  list-style: none;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+}
+
+.drop {
+  position: absolute;
+  list-style: none;
+  /* border: 1px solid black; */
+  margin-left: 0;
+}
+
+li {
+  padding: 1vh;
+  cursor: pointer;
+}
+li:hover {
+  background-color: aqua;
+}
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}

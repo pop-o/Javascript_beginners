@@ -1,6 +1,24 @@
 'use strict';
-const text =
+
+const newText =
   'The ancient city was bathed in the golden hues of the setting sun, casting long shadows across the cobblestone streets. Birds chirped their final songs of the day, while the distant hum of the marketplace gradually faded into a tranquil silence. Towering above the city, the old castle stood as a sentinel of bygone eras, its weathered stones whispering tales of knights and kings. As twilight descended, the aroma of freshly baked bread wafted through the air, mingling with the scent of blooming jasmine. Children’s laughter echoed from the nearby park, their carefree joy a stark contrast to the solemnity of the ancient walls. The city, a harmonious blend of past and present, thrived with a rhythm uniquely its own, promising new adventures with each dawn.';
+const textArray = newText.split(' ');
+
+const textArrayLength = textArray.length;
+// while (textArrayLength > 0) {
+//   let i = Math.random() * textArrayLength;
+//   let newText = newText + ' ' + textArray[i];
+// }
+
+let text = '';
+while (true) {
+  let i = Math.trunc(Math.random() * textArrayLength + 1);
+  text += ` ${textArray[i]}`;
+  if (text.split(' ').length > 100) {
+    break;
+  }
+}
+
 const textSplitChar = text.split('');
 const textSplitWords = text.split(' ');
 const testText = document.getElementById('testText');
